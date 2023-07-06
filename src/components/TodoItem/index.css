@@ -1,0 +1,17 @@
+.title {
+  list-style: none;
+  margin: 5px;
+  padding: px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+.btn {
+  color: brown;
+  border: 1px solid red;
+  border-radius: 3px;
+  background-color: aliceblue;
+  margin: 6px;
+  cursor: pointer;
+}

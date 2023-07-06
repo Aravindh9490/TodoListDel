@@ -1,0 +1,15 @@
+.bg1 {
+  background-color: #ffc2a0;
+  height: 200vh;
+  padding-top: 10px;
+}
+.bg2 {
+  background-color: aliceblue;
+  margin: 200px;
+  padding: 20px;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
