@@ -1,6 +1,7 @@
 import {Component} from 'react'
 import './index.css'
 import TodoItem from '../TodoItem'
+import AddTodo from '../AddTodo'
 
 const initialTodosList = [
   {
@@ -46,12 +47,26 @@ class SimpleTodos extends Component {
     this.setState({finalTodosList: result})
   }
 
+  addNewTodo = text => {
+    const {finalTodosList} = this.state
+
+    this.setState(prev => ({
+      finalTodosList: [
+        {id: finalTodosList.length + 1, title: text},
+        ...prev.finalTodosList,
+      ],
+    }))
+  }
+
   render() {
     const {finalTodosList} = this.state
     return (
       <div className="bg1">
         <div className="bg2">
           <h1>Simple Todos</h1>
+          <div>
+            <AddTodo adding={this.addNewTodo} />
+          </div>
           <ul>
             {finalTodosList.map(eachTodo => (
               <TodoItem
