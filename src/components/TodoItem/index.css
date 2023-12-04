@@ -15,3 +15,38 @@
   margin: 6px;
   cursor: pointer;
 }
+.edit {
+  color: blue;
+  border: 1px solid blue;
+}
+
+.title {
+  align-self: flex-start;
+}
+.lineOnText {
+  text-decoration: line-through;
+}
+
+.checkboxView {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+.checkbox {
+  width: 20px;
+  height: 20px;
+  cursor: pointer;
+}
+.input {
+  border: 2px solid transparent;
+  width: 400px;
+  height: 2.5em;
+  padding-left: 0.8em;
+  outline: none;
+  overflow: hidden;
+  background-color: #f3f3f3;
+  border-radius: 10px;
+  transition: all 0.5s;
+  border: 1px solid black;
+}

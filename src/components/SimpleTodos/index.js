@@ -58,6 +58,16 @@ class SimpleTodos extends Component {
     }))
   }
 
+  editedTodo = (id, newText) => {
+    const {finalTodosList} = this.state
+
+    const modifiedList = finalTodosList.map(each =>
+      each.id === id ? {...each, title: newText} : each,
+    )
+
+    this.setState({finalTodosList: modifiedList})
+  }
+
   render() {
     const {finalTodosList} = this.state
     return (
@@ -73,6 +83,7 @@ class SimpleTodos extends Component {
                 title={eachTodo.title}
                 uniqueKey={eachTodo.id}
                 ondelete={this.ondelete}
+                editedTodo={this.editedTodo}
                 key={eachTodo.id}
               />
             ))}
